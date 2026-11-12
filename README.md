@@ -60,7 +60,7 @@ flowchart TD
 | Sujan Karna | [@SujanKarna](https://github.com/SujanKarna) |
 | Meeta Dave | [@davemeeta](https://github.com/davemeeta) |
 | Hein Naing Soe | [@HeinNS](https://github.com/HeinNS) |
-| Clara | _TBD_ |
+| Kyi Phyu Shin | [@ClariceKyi](https://github.com/ClariceKyi) |
 
 ## Technology Stack
 
