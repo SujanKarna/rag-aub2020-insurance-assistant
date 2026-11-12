@@ -56,7 +56,7 @@ flowchart TD
 ## Team Members
 
 | Name | GitHub |
-| --- | --- | --- |
+| --- | --- |
 | Sujan Karna | [@SujanKarna](https://github.com/SujanKarna) |
 | Meeta Dave | [@davemeeta](https://github.com/davemeeta) |
 | Hein Naing Soe | [@HeinNS](https://github.com/HeinNS) |
