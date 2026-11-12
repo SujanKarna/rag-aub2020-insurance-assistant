@@ -37,11 +37,76 @@ These are not part of the initial objective. They depend on time and resources.
 - Evaluate different language models (different sizes, multilingual capabilities).
 - Add further insurance policy documents.
 
+## Architecture
+
+```mermaid
+flowchart TD
+    A[AUB PDF] --> B[Chunking]
+    B --> C[Embeddings]
+    C --> D[(Vector Database)]
+    Q[User question] -->|same embedding model| E[Retriever]
+    D --> E
+    E --> F[LLM]
+    F --> G[Answer with clause citations]
+```
+
+- **Indexing (runs once):** AUB PDF → Chunking → Embeddings → Vector Database
+- **Querying (runs per question):** the question is embedded with the same model, the retriever finds the most similar clauses, and the LLM writes an answer from them.
+
 ## Team Members
+
+| Name | GitHub |
+| --- | --- | --- |
+| Sujan Karna | [@SujanKarna](https://github.com/SujanKarna) |
+| Meeta Dave | [@davemeeta](https://github.com/davemeeta) |
+| Hein Naing Soe | [@HeinNS](https://github.com/HeinNS) |
+| Clara | _TBD_ |
 
 ## Technology Stack
 
+> _Placeholder: to be decided._
+
+| Component | Tool / Library |
+| --- | --- |
+| Language | _TBD_ |
+| Document extraction | _TBD_ |
+| Chunking | _TBD_ |
+| Embedding model | _TBD_ |
+| Vector database | _TBD_ |
+| LLM | _TBD_ |
+| Evaluation | _TBD_ |
+
 ## Setup Instructions
+
+> _Placeholder: will be added once the tech stack is finalised._
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/SujanKarna/rag-aub2020-insurance-assistant.git
+cd rag-aub2020-insurance-assistant
+
+# 2. Create environment and install dependencies
+# TBD
+
+# 3. Place the AUB 2020 PDF in documents/
+# TBD
+
+# 4. Run the pipeline
+# TBD
+```
 
 ## Repository Structure
 
+```text
+rag-aub2020-insurance-assistant/
+├── documents/    # Source document: the AUB 2020 PDF
+├── data/         # Extracted text and chunks with clause metadata
+├── embeddings/   # Saved vectors / vector database files
+├── src/          # Pipeline code: extraction, chunking, embedding, retrieval, generation
+├── notebooks/    # Jupyter notebooks for experiments
+├── tests/        # Evaluation questions and tests
+├── results/      # Evaluation outputs and answer logs
+├── docs/         # Project documentation and diagrams
+├── LICENSE
+└── README.md
+```
